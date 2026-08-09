@@ -1,0 +1,308 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.phone {
+  width: 100%;
+  max-width: 420px;
+  background: #3a3a3a;
+  border-radius: 24px;
+  padding: 16px 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.tela {
+  display: none;
+}
+.tela.ativa {
+  display: block;
+}
+
+/* ===== TELA LISTA ===== */
+.titulo-grande {
+  background: #f0c419;
+  border-radius: 10px;
+  padding: 18px 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.titulo-grande h1 {
+  color: #2b2b2b;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.aba-pesquisa {
+  background: #555;
+  border-radius: 8px;
+  padding: 6px;
+  margin-bottom: 12px;
+}
+.aba-pesquisa input {
+  width: 100%;
+  border: none;
+  background: #eee;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.grid-pokemons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.4fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.poke-card {
+  background: linear-gradient(180deg, #ff7a1a 0%, #e6231e 100%);
+  border-radius: 10px;
+  padding: 8px 6px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.poke-card:hover {
+  transform: scale(1.04);
+}
+.poke-card img {
+  width: 100%;
+  max-width: 60px;
+  image-rendering: pixelated;
+}
+.poke-card.grande {
+  grid-row: span 2;
+  justify-content: center;
+}
+.poke-card.grande img {
+  max-width: 90px;
+}
+.poke-card .nome-card {
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  margin-top: 4px;
+  text-transform: capitalize;
+}
+
+.paginacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #3f8ff5;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+}
+.paginacao button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.paginacao button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.paginacao span {
+  color: #fff;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.rodape {
+  background: #f0c419;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+.rodape span {
+  color: #2b2b2b;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+/* ===== TELA DETALHE ===== */
+.btn-voltar {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.card-topo {
+  background: linear-gradient(180deg, #ff5a1a 0%, #d61414 100%);
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.card-topo h2 {
+  color: #fff;
+  font-size: 20px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+.tipos {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+.tipo-pill {
+  background: #1a1a1a;
+  color: #fff;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.sprite-grande {
+  width: 140px;
+  height: 140px;
+  image-rendering: pixelated;
+  margin: 4px auto;
+}
+.barra-hp-container {
+  margin-top: 8px;
+}
+.barra-hp-container span {
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+}
+.barra-hp-fundo {
+  background: #1a1a1a;
+  border-radius: 10px;
+  height: 10px;
+  margin-top: 4px;
+  overflow: hidden;
+}
+.barra-hp-preenchida {
+  background: #3ddc3d;
+  height: 100%;
+  width: 0%;
+  transition: width 0.4s ease;
+}
+
+.faixa-nome {
+  background: #c41414;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.faixa-hp {
+  margin-top: 6px;
+}
+.faixa-evolucoes {
+  margin-top: 10px;
+  cursor: default;
+}
+
+.grid-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.stat-box {
+  background: #b81010;
+  border-radius: 8px;
+  padding: 10px 8px;
+  text-align: center;
+}
+.stat-label {
+  display: block;
+  color: #ffd9d9;
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.stat-valor {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.secao-evolucoes {
+  background: #555;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+.cadeia-evolucao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+.evo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.evo-item img {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(180deg, #ff7a1a 0%, #e6231e 100%);
+  border-radius: 8px;
+  image-rendering: pixelated;
+}
+.evo-item span {
+  color: #fff;
+  font-size: 9px;
+  margin-top: 2px;
+  text-transform: capitalize;
+}
+.evo-seta {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+.evo-ramo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.loading, .erro {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  grid-column: 1 / -1;
+}

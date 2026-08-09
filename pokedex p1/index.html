@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pokedex</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="phone">
+
+    <!-- ===================== TELA 1: LISTA ===================== -->
+    <section id="tela-lista" class="tela ativa">
+      <header class="titulo-grande">
+        <h1>POKEDEX</h1>
+      </header>
+
+      <div class="aba-pesquisa">
+        <input type="text" id="input-busca" placeholder="Buscar pokémon...">
+      </div>
+
+      <div id="grid-pokemons" class="grid-pokemons">
+        <!-- cards inseridos via JS -->
+      </div>
+
+      <div class="paginacao">
+        <button id="btn-retroceder">RETROCEDER</button>
+        <span id="pagina-atual">1</span>
+        <button id="btn-avancar">AVANÇAR</button>
+      </div>
+
+      <footer class="rodape">
+        <span>POKEDEX</span>
+      </footer>
+    </section>
+
+    <!-- ===================== TELA 2: DETALHE ===================== -->
+    <section id="tela-detalhe" class="tela">
+      <button id="btn-voltar" class="btn-voltar">← VOLTAR</button>
+
+      <div class="card-topo">
+        <h2 id="detalhe-nome">NOME</h2>
+        <div id="detalhe-tipos" class="tipos"></div>
+        <img id="detalhe-sprite" class="sprite-grande" src="" alt="sprite">
+        <div class="barra-hp-container">
+          <span id="detalhe-hp-label">HP 0/0</span>
+          <div class="barra-hp-fundo">
+            <div id="detalhe-hp-barra" class="barra-hp-preenchida"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faixa-nome" id="detalhe-nome-faixa">NOME</div>
+
+      <div class="grid-stats">
+        <div class="stat-box"><span class="stat-label">ATAQUE</span><span id="stat-attack" class="stat-valor">0</span></div>
+        <div class="stat-box stat-mid"><span class="stat-label">DEFESA</span><span id="stat-defense" class="stat-valor">0</span></div>
+        <div class="stat-box"><span class="stat-label">ATAQUE ESP.</span><span id="stat-spattack" class="stat-valor">0</span></div>
+        <div class="stat-box stat-mid"><span class="stat-label">DEFESA ESP.</span><span id="stat-spdefense" class="stat-valor">0</span></div>
+        <div class="stat-box"><span class="stat-label">SPEED</span><span id="stat-speed" class="stat-valor">0</span></div>
+        <div class="stat-box"><span class="stat-label">TOTAL</span><span id="stat-total" class="stat-valor">0</span></div>
+      </div>
+
+      <div class="faixa-nome faixa-hp">
+        <span id="detalhe-hp-label-2">HP 0/0</span>
+      </div>
+
+      <div class="secao-evolucoes">
+        <div class="faixa-nome faixa-evolucoes">EVOLUÇÕES</div>
+        <div id="cadeia-evolucao" class="cadeia-evolucao">
+          <!-- inserido via JS -->
+        </div>
+      </div>
+
+      <footer class="rodape">
+        <span>POKEDEX</span>
+      </footer>
+    </section>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
