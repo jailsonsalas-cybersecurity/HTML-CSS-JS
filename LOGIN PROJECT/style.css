@@ -1,0 +1,122 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #030013;
+    color: #e6e6e6;
+    font-family: "Poppins", sans-serif;
+}
+
+button{
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+button:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+p{ 
+    opacity: 0.8;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    padding: 4%;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+
+    ul{
+        display: flex;
+        gap: 24px;
+        list-style-type: none;
+        background-color: #ffffff00;
+        padding: 16px 20px;
+        border-radius: 12px;
+        border: 8px;
+        border-color: #b1a0b1;
+        backdrop-filter: blur(8px);
+    }
+}
+
+.logotipo{
+    width: 60px;
+    height: 60px;
+}
+
+section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8% 0;
+}
+.secao1{
+    background-image: url(assets/img/bg-sec1.webps);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+    h2{
+        font-size: 13vw;
+        color: #ffffff3d;
+        mix-blend-mode: color-dodge;
+
+    }
+}
+
+.conteudoPrincipal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+        text-align: center;
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+    .divBotoes{
+        display: flex;
+        gap: 20px;
+        margin-top: 28px;
+    }
+
+    .botaoPrimario{
+        background-color: #b1a0b1;
+        gap: 12px;
+        padding: 6px 6px 6px 20px;
+        margin-right: 16px;
+
+        img{
+            width: 44px;
+        }
+    }
+
+    botaoSecundario{
+        background-color: #ffffff05;
+        padding: 16px;
+        color: #ffffff00;
+    }
+
+}
+
